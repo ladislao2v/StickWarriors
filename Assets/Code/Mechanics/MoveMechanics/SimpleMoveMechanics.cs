@@ -16,7 +16,12 @@ namespace Code.Mechanics.MoveMechanics
             if (Enabled == false)
                 return;
 
-            _characterController.Move(direction * (_speed * Time.deltaTime));
+            _characterController.Move(CalculateOffset(direction));
+        }
+
+        private Vector3 CalculateOffset(Vector3 direction)
+        {
+            return direction * (_speed * Time.deltaTime);
         }
     }
 }

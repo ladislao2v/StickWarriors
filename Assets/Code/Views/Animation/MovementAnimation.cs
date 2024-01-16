@@ -9,7 +9,7 @@ namespace Code.Views.Animation
     [Serializable]
     public class MovementAnimation : ObjectPart, IView, IInitializable
     {
-        private static int Magnitude = Animator.StringToHash(nameof(Magnitude));
+        public static int Magnitude = Animator.StringToHash(nameof(Magnitude));
         
         [SerializeField] private Animator _animator;
         

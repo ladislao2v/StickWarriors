@@ -28,11 +28,18 @@ namespace Code.Mechanics.CameraFollowerMechanics
         {
             if(Enabled == false)
                 return;
-            
-            float x = Mathf.Lerp(_camera.position.x, _target.position.x, Time.deltaTime * _delaySpeed);
-            float z = Mathf.Lerp(_camera.position.z, _target.position.z - _yOffset, Time.deltaTime * _delaySpeed);
-            
-            _camera.position = new Vector3(x, _camera.position.y, z);
+
+            _camera.position = GetNewCameraPosition();
+        }
+
+        private Vector3 GetNewCameraPosition()
+        {
+            float x = 
+                Mathf.Lerp(_camera.position.x, _target.position.x, Time.deltaTime * _delaySpeed);
+            float z = 
+                Mathf.Lerp(_camera.position.z, _target.position.z - _yOffset, Time.deltaTime * _delaySpeed);
+
+            return new Vector3(x, _camera.position.y, z);
         }
     }
 }

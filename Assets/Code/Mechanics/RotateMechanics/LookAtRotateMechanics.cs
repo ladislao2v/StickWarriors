@@ -12,7 +12,6 @@ namespace Code.Mechanics.RotateMechanics
         
         private Transform _transform;
 
-
         public void Construct(DynamicObject dynamicObject)
         {
             _transform = dynamicObject.transform;
@@ -23,13 +22,18 @@ namespace Code.Mechanics.RotateMechanics
             if(Enabled == false)
                 return;
 
+            _transform.rotation = GetRotationByDirection(direction);
+        }
+
+        private Quaternion GetRotationByDirection(Vector3 direction)
+        {
             Quaternion targetRotation = _transform.rotation;
+
+            if (direction.magnitude > 0)
+                targetRotation = Quaternion.LookRotation(direction);
             
-            if(direction.magnitude > 0)
-                 targetRotation = Quaternion.LookRotation(direction);
-            
-            _transform.rotation = 
-                Quaternion.Slerp(_transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed); 
+            return Quaternion
+                .Slerp(_transform.rotation, targetRotation, Time.deltaTime * _rotationSpeed);
         }
     }
 }

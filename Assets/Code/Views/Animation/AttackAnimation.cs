@@ -9,7 +9,7 @@ namespace Code.Views.Animation
     [Serializable]
     public class AttackAnimation : ObjectPart, IView
     {
-        private static int Attack = Animator.StringToHash(nameof(Attack));
+        public static int Attack = Animator.StringToHash(nameof(Attack));
         
         [SerializeField] private Animator _animator;
 
