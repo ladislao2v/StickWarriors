@@ -1,6 +1,7 @@
 ﻿using System;
 using Code.Mechanics.MovementMechanics;
 using Code.Services.InputService;
+using Code.Views.Animation;
 using Plugins.DynamicBehaviour;
 using UnityEngine;
 
@@ -14,8 +15,9 @@ namespace Code
         
         private void Awake()
         {
-            if (_player.TryGetMechanics(out IMovementMechanics movementMechanics))
-                _inputService = new DesktopInputService(new InputConfig(), movementMechanics);
+            if (_player.TryGetMechanics(out IMovementMechanics movementMechanics) 
+                && _player.TryGetView(out AttackAnimation attackAnimation))
+                _inputService = new DesktopInputService(new InputConfig(), movementMechanics, attackAnimation);
         }
 
         private void OnEnable()

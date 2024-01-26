@@ -1078,17 +1078,22 @@ PrefabInstance:
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
       propertyPath: _views.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
       propertyPath: _views.Array.data[3]
-      value: 2724193040417947648
+      value: 2724193381118640128
       objectReference: {fileID: 0}
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
       propertyPath: managedReferences[2724193040417947648]
       value: Assembly-CSharp Code.Views.Animation.SpellAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
+        type: 3}
+      propertyPath: managedReferences[2724193381118640128]
+      value: Assembly-CSharp Code.Views.Animation.AttackAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
@@ -1107,6 +1112,11 @@ PrefabInstance:
       objectReference: {fileID: 1014936360}
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
+      propertyPath: managedReferences[2724193381118640128]._animator
+      value: 
+      objectReference: {fileID: 1014936360}
+    - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
+        type: 3}
       propertyPath: managedReferences[2724192934847578120]._rotationSpeed
       value: 25
       objectReference: {fileID: 0}
@@ -1118,6 +1128,11 @@ PrefabInstance:
     - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
         type: 3}
       propertyPath: managedReferences[2724193040417947648].<Enabled>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6690580963399254296, guid: e8c07a269b6759a4ab0ff750239d0395,
+        type: 3}
+      propertyPath: managedReferences[2724193381118640128].<Enabled>k__BackingField
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
